@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href='./bootstrap-3.3.7-dist/css/bootstrap.css'>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <div class="left-menu">
+            <div id="logo">
+                <img src="./img/logo.png" alt="渡一教育">
+                <span>渡一教育</span>
+            </div>
+            <div id="info">
+                <p>XXX</p>
+                <p>12345@qq.com</p>
+                <p>渡一教育</p>
+            </div>
+            <div class="list">
+                <p>账号管理</p>
+                <ul>
+                    <li class="active" data-id="source">资源管理</li>
+                    <li>权限管理</li>
+                    <li>用户管理</li>
+                    <li data-id="change">修改密码</li>
+                </ul>
+                <p>地区管理</p>
+                <ul>
+                    <li>地区管理</li>
+                    <li>规则管理</li>
+                    <li>人员信息</li>
+                    <li>作为信息</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-con">
+            <a href="#" class="toggle-btn">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </a>
+            <div class="tab-content">
+                <!-- 资源管理 -->
+                <div class="tab-pane active" id="source">
+                    <div class="check-div form-inline">
+                        <button class="btn btn-yellow" data-toggle="modal" data-target="#addSource">添加资源</button>
+                    </div>
+                    <!-- 列表问题 -->
+                    <div class="con">
+                        <div class="row table-header">
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 ">
+                                编码
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                名称
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                链接
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                操作
+                            </div>
+                        </div>
+                        <div class="table-body">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    1
+                                </div>
+                                <!-- data-toggle="collapse"标记当前为折叠按钮 -->
+                                <!--  href="#collapseSystem" 值为展开子组件的id -->
+                                <div id="topAD" class="col-lg-4 col-md-4 col-sm-4 col-xs-4" role="button"
+                                    data-toggle="collapse" href="#collapseSystem">
+                                    <span id="topA" class="glyphicon glyphicon-triangle-bottom"></span>
+                                    <span>系统管理</span>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                    /admin/system/userlist/software/
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                    <button class="btn btn-success btn-xs" data-toggle="modal"
+                                        data-target="#changeSource">修改</button>
+                                    <button class="btn btn-danger btn-xs" data-toggle="modal"
+                                        data-target="#deleteSource">删除</button>
+                                </div>
+                            </div>
+                            <div class="collapse in" id="collapseSystem">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 levl3 ">
+                                        1
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  levl3">
+                                        <span>资源管理</span>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        /admin/system/userlist/software/
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <button class="btn btn-success btn-xs" data-toggle="modal"
+                                            data-target="#changeSource">修改</button>
+                                        <button class="btn btn-danger btn-xs" data-toggle="modal"
+                                            data-target="#deleteSource">删除</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  levl3 ">
+                                        2
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  levl3">
+
+                                        <span>权限管理</span>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        /admin/system/userlist/software/
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <button class="btn btn-success btn-xs" data-toggle="modal"
+                                            data-target="#changeSource">修改</button>
+                                        <button class="btn btn-danger btn-xs" data-toggle="modal"
+                                            data-target="#deleteSource">删除</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  levl3">
+                                        3
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4   levl3">
+
+                                        <span>地区管理</span>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        /admin/system/userlist/software/
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <button class="btn btn-success btn-xs" data-toggle="modal"
+                                            data-target="#changeSource">修改</button>
+                                        <button class="btn btn-danger btn-xs" data-toggle="modal"
+                                            data-target="#deleteSource">删除</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 levl3">
+                                        4
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  levl3">
+
+                                        <span>规则管理</span>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        /admin/system/userlist/software/
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <button class="btn btn-success btn-xs " data-toggle="modal "
+                                            data-target="#changeSource ">修改</button>
+                                        <button class="btn btn-danger btn-xs " data-toggle="modal "
+                                            data-target="#deleteSource ">删除</button>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 levl3 ">
+                                        5
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 levl3">
+
+                                        <span>人员信息</span>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        /admin/system/userlist/software/
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <button class="btn btn-success btn-xs" data-toggle="modal"
+                                            data-target="#changeSource">修改</button>
+                                        <button class="btn btn-danger btn-xs" data-toggle="modal"
+                                            data-target="#deleteSource">删除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 弹框 -->
+                    <!-- 添加资源弹出框 -->
+                    <!-- fade以淡入淡出得形式出现消失 -->
+                    <!-- aria-labelledby="gridSystemModalLabel"，该属性引用模态框的标题 -->
+                    <!-- 为 .modal 添加 role="dialog"，用于指定模态框为对话框 -->
+                    <div class="modal fade" id="addSource" role="dialog" aria-labelledby="gridSystemModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <!-- data-dismiss="modal" 点击关闭当前弹窗-->
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="gridSystemModalLabel">添加资源</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <form class="form-horizontal">
+                                            <div class="form-group ">
+                                                <label for="sName" class="col-xs-3 control-label">名称：</label>
+                                                <div class="col-xs-8 ">
+                                                    <input type="email" class="form-control input-sm" id="sName"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sLink" class="col-xs-3 control-label">链接：</label>
+                                                <div class="col-xs-8 ">
+                                                    <input type="" class="form-control input-sm" id="sLink"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sOrd" class="col-xs-3 control-label">排序：</label>
+                                                <div class="col-xs-8">
+                                                    <input type="" class="form-control input-sm" id="sOrd"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sKnot" class="col-xs-3 control-label">父节点：</label>
+                                                <div class="col-xs-8">
+                                                    <input type="" class="form-control input-sm" id="sKnot"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-xs btn-xs btn-white" data-dismiss="modal">取
+                                        消</button>
+                                    <button type="button" class="btn btn-xs btn-xs btn-green">保 存</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 修改密码模块 -->
+                <div class="tab-pane" id="change">
+                    <div class="change">
+                        <!-- 创建水平表单 向父 <form> 元素添加 class .form-horizontal。 -->
+                        <!-- 把标签和控件放在一个带有 class .form-group 的 <div> 中。 -->
+                        <!-- 向标签添加 class .control-label。 -->
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="sKnot" class="col-xs-4 control-label">原密码：</label>
+                                <div class="col-xs-5">
+                                    <input type="" class="form-control input-sm" id="sKnot" placeholder=""
+                                        style="margin-top: 7px;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sKnot" class="col-xs-4 control-label">新密码：</label>
+                                <div class="col-xs-5">
+                                    <input type="" class="form-control input-sm" id="sKnot" placeholder=""
+                                        style="margin-top: 7px;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sKnot" class="col-xs-4 control-label">重复密码：</label>
+                                <div class="col-xs-5">
+                                    <input type="" class="form-control input-sm" id="sKnot" placeholder=""
+                                        style="margin-top: 7px;">
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <div class="col-xs-offset-4 col-xs-5" style="margin-left: 169px;">
+                                    <button type="reset" class="btn btn-xs btn-white">取 消</button>
+                                    <button type="submit" class="btn btn-xs btn-green">保存</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
